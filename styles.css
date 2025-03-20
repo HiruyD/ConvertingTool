@@ -1,14 +1,16 @@
 /* Center the content container */
 .content {
   position: fixed;
-  width: 550px;
-  height: 729px;
+  width: 90vw; /* Use viewport width */
+  max-width: 550px; /* Set a max width */
+  height: 90vh; /* Use viewport height */
+  max-height: 729px; /* Set a max height */
   background-color: #1f2937;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 2vw; /* Use viewport width for font size */
 
   /* Centering */
   top: 50%;
@@ -18,11 +20,13 @@
 
 /* Ensure the input field is centered within the container */
 .inPutt {
-  width: 211px;
-  height: 51.23px;
+  width: 40vw; /* Use viewport width */
+  max-width: 211px; /* Set a max width */
+  height: 10vh; /* Use viewport height */
+  max-height: 51.23px; /* Set a max height */
   font-family: "Inter", sans-serif;
   font-weight: 800;
-  font-size: 58px;
+  font-size: 5vw; /* Use viewport width for font size */
   line-height: 24px;
   text-align: center;
   background-color: #1f2937;
@@ -31,13 +35,14 @@
 
 /* Heading */
 h1 {
-  width: 448.4px;
-  height: 38px;
+  width: 80vw; /* Use viewport width */
+  max-width: 448.4px; /* Set a max width */
+  height: auto; /* Let height adjust automatically */
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 800;
-  font-size: 28px;
-  line-height: 38px;
+  font-size: 4vw; /* Use viewport width for font size */
+  line-height: 1.2; /* Adjust line height */
   letter-spacing: -0.03em;
   color: #ffffff;
 }
@@ -50,17 +55,18 @@ h1 {
   flex-direction: column;
   justify-content: center; /* Centers content vertically */
   align-items: center; /* Centers content horizontally */
-  width: 448px;
-  height: 108px;
+  width: 80vw; /* Use viewport width */
+  max-width: 448px; /* Set a max width */
+  height: auto; /* Let height adjust automatically */
   background: #273549;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 3vw; /* Use viewport width for font size */
   text-align: center;
   color: #ccc1ff;
-  gap: 10px; /* Reduces spacing between items */
-  margin-top: 20px;
-  padding: 10px; /* Ensures no content is pushed outside */
+  gap: 2vw; /* Use viewport width for gap */
+  margin-top: 2vh; /* Use viewport height for margin */
+  padding: 2vw; /* Use viewport width for padding */
 }
 
 /* Ensure .theOut stays inside */
@@ -68,9 +74,9 @@ h1 {
 .volume .theOut,
 .mass .theOut {
   color: antiquewhite;
-  font-size: 18px;
+  font-size: 2.5vw; /* Use viewport width for font size */
   line-height: 1.2;
-  margin-top: 5px; /* Small adjustment for spacing */
+  margin-top: 1vh; /* Use viewport height for margin */
   width: 100%; /* Ensures it spans the container */
   text-align: center;
 }
@@ -79,26 +85,62 @@ h1 {
 #conBttn,
 #clrBttn,
 #savBttn {
-  width: 117px;
-  height: 42px;
+  width: 25vw; /* Use viewport width */
+  max-width: 117px; /* Set a max width */
+  height: 8vh; /* Use viewport height */
+  max-height: 42px; /* Set a max height */
   background: #dbd7d7;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  margin-top: 5pxpx;
+  margin-top: 1vh; /* Use viewport height for margin */
 }
 
 /* Input Box */
 #inPut {
   box-sizing: border-box;
-  width: 117px;
-  height: 83px;
+  width: 25vw; /* Use viewport width */
+  max-width: 117px; /* Set a max width */
+  height: 15vh; /* Use viewport height */
+  max-height: 83px; /* Set a max height */
   border: 2px solid #b295ff;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 2vh; /* Use viewport height for margin */
 }
+
 .input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px; /* Adds space between input and button */
+  gap: 3vh; /* Use viewport height for gap */
+}
+
+/* Media queries to limit the maximum width of elements */
+@media (min-width: 768px) {
+  .content {
+    max-width: 600px;
+  }
+
+  .inPutt {
+    max-width: 250px;
+  }
+
+  h1 {
+    max-width: 500px;
+  }
+
+  .length,
+  .volume,
+  .mass {
+    max-width: 500px;
+  }
+
+  #conBttn,
+  #clrBttn,
+  #savBttn {
+    max-width: 150px;
+  }
+
+  #inPut {
+    max-width: 150px;
+  }
 }
