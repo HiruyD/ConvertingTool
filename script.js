@@ -1,4 +1,5 @@
 const convBtn = document.getElementById("conBttn");
+const clrBtn = document.getElementById("clrBttn");
 let totalLen = 0;
 let totalVol = 0;
 let totalMass = 0;
@@ -7,6 +8,13 @@ convBtn.addEventListener("click", function () {
   convertLength();
   convertVolume();
   convertMass();
+});
+
+clrBtn.addEventListener("click", function () {
+  document.getElementById("inPut").value = "";
+  document.getElementById("LenOut").innerText = "";
+  document.getElementById("VolOut").innerText = "";
+  document.getElementById("MassOut").innerText = "";
 });
 
 // write functions for each conversion that take in the input when button is clicked
@@ -37,4 +45,10 @@ function convertMass() {
   document.getElementById(
     "MassOut"
   ).innerText = `${input1} kilos = ${totalMass} pounds | ${input1} pounds = ${totalMass2} kilos`;
+}
+
+function futureMsg() {
+  alert(
+    "This feature is coming soon! , Give me a break, I'm trying my best here"
+  );
 }

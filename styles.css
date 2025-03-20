@@ -76,13 +76,15 @@ h1 {
 }
 
 /* Button */
-#conBttn {
+#conBttn,
+#clrBttn,
+#savBttn {
   width: 117px;
   height: 42px;
-  background: #ffffff;
+  background: #dbd7d7;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 5pxpx;
 }
 
 /* Input Box */
